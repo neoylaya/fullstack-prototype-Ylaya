@@ -1,0 +1,54 @@
+body{
+  background:#f5f7fa;
+  font-family:system-ui;
+}
+
+.page { display:none; }
+.page.active { display:block; }
+
+body.not-authenticated .role-logged-in { display:none; }
+body.authenticated .role-logged-out { display:none; }
+
+.role-admin{ display:none; }
+body.is-admin .role-admin{ display:inline-block; }
+
+.card{
+  border:none;
+  border-radius:12px;
+}
+
+table{
+  background:white;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+h3{
+  margin-bottom:20px;
+}
+
+
+/* VERIFY EMAIL PAGE */
+
+.verify-wrapper{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.verify-card{
+  background:white;
+  padding:40px;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  width:100%;
+  max-width:600px;
+}
+
+.alert-success{
+  background:#d1e7dd;
+  border:none;
+  border-radius:8px;
+  font-size:0.95rem;
+}
