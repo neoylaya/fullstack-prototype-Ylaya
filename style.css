@@ -1,54 +1,88 @@
-body{
-  background:#f5f7fa;
-  font-family:system-ui;
+body {
+    background: #f5f7fa;
+    font-family: system-ui, sans-serif;
 }
 
-.page { display:none; }
-.page.active { display:block; }
+/* ======= PAGE ROUTING ======= */
+.page { display: none; }
+.page.active { display: block; }
 
-body.not-authenticated .role-logged-in { display:none; }
-body.authenticated .role-logged-out { display:none; }
+/* ======= AUTH VISIBILITY ======= */
+body.not-authenticated .role-logged-in { display: none; }
+body.authenticated .role-logged-out { display: none; }
 
-.role-admin{ display:none; }
-body.is-admin .role-admin{ display:inline-block; }
+.role-admin { display: none !important; }
+body.is-admin .role-admin { display: block !important; }
 
-.card{
-  border:none;
-  border-radius:12px;
+/* For inline/flex items like nav links inside dropdown */
+body.is-admin .dropdown-item.role-admin { display: block !important; }
+
+/* ======= CARD / TABLE ======= */
+.card {
+    border: none;
+    border-radius: 12px;
 }
 
-table{
-  background:white;
-  border-radius:8px;
-  overflow:hidden;
+table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-h3{
-  margin-bottom:20px;
+h3, h4 {
+    margin-bottom: 20px;
 }
 
-
-/* VERIFY EMAIL PAGE */
-
-.verify-wrapper{
-  min-height:70vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* ======= FORM CARD ======= */
+.form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
 }
 
-.verify-card{
-  background:white;
-  padding:40px;
-  border-radius:14px;
-  box-shadow:0 8px 24px rgba(0,0,0,0.08);
-  width:100%;
-  max-width:600px;
+/* ======= VERIFY EMAIL PAGE ======= */
+.verify-wrapper {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.alert-success{
-  background:#d1e7dd;
-  border:none;
-  border-radius:8px;
-  font-size:0.95rem;
+.verify-card {
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 600px;
+}
+
+.alert-success {
+    background: #d1e7dd;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+/* ======= TOAST ======= */
+.toast {
+    min-width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* ======= NAVBAR ======= */
+.navbar-brand {
+    font-size: 1rem;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 576px) {
+    .form-card, .verify-card {
+        padding: 24px;
+    }
 }
